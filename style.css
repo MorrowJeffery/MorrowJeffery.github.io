@@ -1,0 +1,67 @@
+
+header {
+    background:white;
+    width:100%; 
+    margin: 0;
+    height:20%;
+}
+.topBar {
+    float: left;
+    width: 7%;
+    margin-top: 2%;
+    padding-left: 10px;
+    color:grey;
+    text-decoration: none;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    margin-right:3px;
+}
+#name {
+    float: left;
+    width: 15%;
+    background: rgb(97, 233, 97);
+    margin-left: 10%;
+    margin-right: 35%;
+    padding: 20px;
+}
+
+body {
+    background:grey;
+    margin: 0;
+}
+.clearfix::after {
+    content: "";
+    display:block;
+    clear:both;
+  }
+
+  #aboutMe {
+      color:green;
+  }
+#aboutMeBlock {
+    background:white;
+    margin-top:5%;
+    margin-bottom:15%;
+    margin-left:20%;
+    margin-right:20%;
+    padding:2%;
+    height: 400px;         
+    width:60%;
+}
+
+#aboutMeImage {
+    float:left;
+    height:100px;
+    width:100px;
+}
+
+#underTopBar {
+    background: grey;
+}
+
+#tophr {
+    border-color:black;
+    margin: 0;
+}
