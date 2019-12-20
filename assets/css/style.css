@@ -8,16 +8,14 @@ header {
     float: left;
     width: 7%;
     margin-top: 2%;
-    padding-left: 10px;
     color:white;
     text-decoration: none;
     border: 1px;
     border-style: solid;
     border-color: black;
-    padding: 5px;
-    margin-right:3px;
+    padding: 1%;
+    margin-right:.5%;
     background: #45B69C;
-    display: inline;
 }
 #name {
     float: left;
