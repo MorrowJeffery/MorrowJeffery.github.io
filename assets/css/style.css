@@ -86,3 +86,21 @@ footer {
     background:#06D6A0;
     color:white;
 }
+
+.portObj {
+    height:100px;
+    width: 100px;
+    margin: 5px;
+}
+
+.portObjHolder {
+    position: relative;
+}
+
+.picText {
+position: absolute;
+  bottom: 5px;
+  left: 35px;
+  background-color: black;
+  color: white;
+}
