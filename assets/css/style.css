@@ -77,3 +77,12 @@ footer {
     display:grid;
     grid-template-rows: auto 1fr auto;
 }
+
+.submitButton {
+    padding: 3px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background:#06D6A0;
+    color:white;
+}

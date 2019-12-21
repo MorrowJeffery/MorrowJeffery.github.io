@@ -9,23 +9,37 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1 class="clearfix" id="name">Jeffery Morrow</h1>
-        <section class="clearfix">
-            <a class="topBar" href="index.html">About</a><a class="topBar" href="portfolio.html">Portfolio</a><a class="topBar" href="./contact.html">Contact</a>
-        </section>
-    </header>
-    <hr id="tophr">
+    <div class="wrapper">
+        <header>
+            <h1 class="clearfix" id="name">Jeffery Morrow</h1>
+            <section class="clearfix">
+                <a class="topBar" href="index.html">About</a><a class="topBar" href="portfolio.html">Portfolio</a><a class="topBar" href="./contact.html">Contact</a>
+            </section>
+        </header>
+        <hr id="tophr">
 
-    <div id="underTopBar">
-        <section id="aboutMeBlock">
-            <h1 >Contact</h1>
-            <hr>
-        </section>
+        <div id="underTopBar">
+            <section id="aboutMeBlock">
+                <h1 >Contact</h1>
+                <hr>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" placeholder="John Snow">
+                    <br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" placeholder="email@provider.domain">
+                    <br>
+                    <label for="message">Message:</label> <br>
+                    <textarea name="message" placeholder="Enter Message Here" id="message" cols="30" rows="10"></textarea>
+                    <br>
+                    <submit class="submitButton">Submit</submit>
+                </form>
+            </section>
+        </div>
+
+        <footer>
+            <p>Copyright &copy;</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>Copyright &copy;</p>
-    </footer>
 </body>
 </html>
