@@ -104,3 +104,13 @@ position: absolute;
   background-color: black;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    .topBar {
+        width: 99%;
+    }
+    #name {
+        width: 99%;
+        margin: 0px;
+    }
+}
