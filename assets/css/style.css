@@ -112,5 +112,6 @@ position: absolute;
     #name {
         width: 99%;
         margin: 0px;
+        text-align: center;
     }
 }
