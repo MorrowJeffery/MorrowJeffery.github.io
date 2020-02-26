@@ -1,4 +1,61 @@
 
+@keyframes spin {
+	0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+	100% {
+        transform: scale(1.0);
+	}
+}
+.navBTN {
+    background-color: black;
+    color: white;
+    padding:0;
+    border:0;
+    font-size: 1.7rem;
+    opacity: 1;
+}
+.navBTN:hover {
+    border: 2px;
+    transform: scale(1.5);
+}
+.navBTN:active {
+    border: 2px;
+}
+
+.myNav {
+    padding-top: 2%;
+}
+.spinny:hover {
+    animation: spin 1s linear infinite;
+}
+
+.parallax-window {
+    min-height: 950px;
+    background: transparent;
+}
+#aboutmeholder {
+    min-height: 950px;
+}
+
+.cardImage {
+    height: 150px;
+}
+
+#mainName {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+.nameDiv {
+    text-align: center;
+    padding-top: 20%;
+    color: white;
+}
+/* 
 header {
     background:#7293A0;
     width:100%; 
@@ -114,4 +171,4 @@ position: absolute;
         margin: 0px;
         text-align: center;
     }
-}
+} */

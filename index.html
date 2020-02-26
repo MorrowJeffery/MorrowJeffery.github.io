@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AboutMe</title>
-    <link rel="stylereset" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets\css\style.css">
 
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <h1 class="clearfix" id="name">Jeffery Morrow</h1>
-            <section class="clearfix">
-                <a class="topBar" href="index.html">About</a><a class="topBar" href="portfolio.html">Portfolio</a><a class="topBar" href="./contact.html">Contact</a>
-            </section>
-        </header>
-        <hr id="tophr">
+  <div class="parallax-window" data-parallax="scroll" data-image-src="assets\images\milky-way-1655504.jpg">
 
-        <div id="underTopBar">
-            <section id="aboutMeBlock">
-                <h1 id="aboutMe" >About Me</h1>
-                <hr>
-                <img src="https://files.slack.com/files-pri/TQR621RHB-FRQAC0PJA/npc.png" alt="Pic of Jeff" id="aboutMeImage">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eum saepe soluta aperiam odio nostrum nesciunt commodi debitis, autem, vel repellendus inventore sunt qui est? Mollitia eum ratione soluta totam!</p>
-            <br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut iste similique dolor quam mollitia deserunt cupiditate deleniti provident voluptatum perferendis nisi, eveniet doloribus, tenetur laborum et ipsam. Rerum, aspernatur eligendi!</p>
-            <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus, dolore dolores sit nulla voluptatem laudantium fugiat quo distinctio, nihil iste ducimus iusto blanditiis quibusdam, architecto culpa! Optio, voluptates earum.</p>
-            </section>
+
+    <!-- <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Jeffery Morrow</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><button>About Me</button></li>
+            <li><li><button>Portfolio</button></li></li>
+            <li><li><button>Contact</button></li></li>
+          </ul>
         </div>
+      </nav> -->
 
-        <footer>
-            <p>Copyright &copy;</p>
-        </footer>
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue">
+          <i class="large fa fa-linkedin"></i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red"><i class="fa fa-linkedin spinny"aria-hidden="true"></i></a></li>
+          <!-- <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li> -->
+        </ul>
+      </div>
+
+      <div id="homepageHolder"></div>
+
     </div>
+
+    <div id="aboutmeholder"></div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets\js\parallax.js-1.5.0\parallax.js"></script>
+    <script src="assets\js\script.js"></script>
+
 </body>
 </html>
