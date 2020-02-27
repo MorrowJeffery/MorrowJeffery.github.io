@@ -34,15 +34,20 @@
 }
 
 .parallax-window {
-    min-height: 950px;
+    min-height: 1950px;
     background: transparent;
+}
+#homepageHolder {
+    min-height: 950px;
 }
 #aboutmeholder {
     min-height: 950px;
+    background-color: transparent;
+    width: 100%;
 }
 
 .cardImage {
-    height: 150px;
+    height: 250px;
 }
 
 #mainName {
@@ -55,6 +60,8 @@
     padding-top: 20%;
     color: white;
 }
+
+
 /* 
 header {
     background:#7293A0;
