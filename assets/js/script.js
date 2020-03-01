@@ -22,12 +22,14 @@ function generateHomepage() {
   let myName = $('<h5>').text("Jeffery Morrow").attr("id", "mainName");
   let nameDiv = $('<div>').addClass("nameDiv");
   let row1 = $('<div>').addClass("row myNav");
-  let col1 = $('<div>').addClass("col s2 offset-s1");
-  let col2 = $('<div>').addClass("col s2 offset-s2");
-  let col3 = $('<div>').addClass("col s2 offset-s3");
+  let col1 = $('<div>').addClass("col s1 offset-s5");
+  let col2 = $('<div>').addClass("col s1 ");
+  let col3 = $('<div>').addClass("col s1 ");
   let aboutMeBUtton = $('<button>').text("About Me").addClass("navBTN").attr("id", "aboutmebtn").attr("goto", 'aboutmeholder');
   let portfolioButton = $('<button>').text("Portfolio").addClass("navBTN").attr("id", "portfoliobtn");
   let contactButton = $('<button>').text("Contact").addClass("navBTN").attr("id", "contactbtn");
+ 
+
 
   contentHolder.append(row1.append(col1, col2, col3));
   col1.append(aboutMeBUtton);
@@ -38,8 +40,8 @@ function generateHomepage() {
 }
 //this generates a page dedicated to giving a little bit of information about me as well as a picture
 function generateAboutMe() {
-  let contentHolder = $("#aboutmeholder").addClass("");
-  let contentHolder2 = $("<div>").addClass("container");
+  let contentHolder = $("#currentpageHolder").addClass("");
+  let contentHolder2 = $("<div>").addClass("container aboutmeContentHolder");
   let row1 = $('<div>').addClass("row");
   let col1 = $('<div>').addClass("col s10 offset-s1");
   let row2 = $('<div>').addClass("row");
@@ -76,8 +78,57 @@ function generateAboutMe() {
 }
 //this will generate the contact page that allows users to contact me once implemented
 function generateContactPage() {
-  let contentHolder = $("#aboutmeholder").addClass("");
+  let contentHolder = $("#currentpageHolder").addClass("");
   let contentHolder2 = $("<div>").addClass("container");
+  let row1 = $('<div>').addClass("row");
+  let col1 = $('<div>').addClass("col s12");
+  let row2 = $('<div>').addClass("row");
+  let col2 = $('<div>').addClass("col s12 m12");
+  let card = $('<div>').addClass("card blue-grey");
+  let cardContent = $('<div>').addClass("card-content white-text");
+  let cardTitle = $('<span>').addClass("card-title").text("Contact");
+  let HR1 = $("<hr>");
+  let formctr = $("<form>");
+  let formdiv1 = $("<div>").addClass("input-field");
+  let formdiv2 = $("<div>").addClass("input-field");
+  let formdiv3 = $("<div>").addClass("input-field");
+  let namelbl = $("<label>").attr("for", "name").text("Name:");
+  let nameipt = $("<input>").attr("type", "text").attr("name", "name").attr("placeholder", "").addClass("formipt");
+  let emaillbl = $("<label>").attr("for", "email").text("Email:");
+  let emailipt = $("<input>").attr("type", "email").attr("name", "email").attr("placeholder", "").addClass("formipt");
+  let textsec = $("<textarea>").attr("type", "email").attr("name", "message").attr("placeholder", "").attr("id", "message").attr("cols", "30").attr("rows","10");
+  let textlbl = $("<label>").attr("for", "message").text("Message:");
+  let formbtn = $("<button>").addClass("formBtn").text("Submit");
+
+  contentHolder.append(contentHolder2);
+  contentHolder2.append(row1);
+  row1.append(col1);
+  col1.append(card);
+  card.append(cardContent);
+  cardContent.append(row2);
+  row2.append(col2);
+  col2.append(cardTitle, HR1);
+  cardContent.append(formctr);
+  formdiv1.append(namelbl, nameipt);
+  formdiv2.append(emaillbl, emailipt);
+  formdiv3.append(textlbl, textsec);
+  formctr.append(formdiv1, formdiv2, formdiv3, formbtn);
+
+
+//   <form>
+//   <label for="name">Name:</label><br>
+//   <input type="text" name="name" placeholder="John Snow">
+//   <br>
+//   <label for="email">Email:</label><br>
+//   <input type="email" name="email" placeholder="email@provider.domain">
+//   <br>
+//   <label for="message">Message:</label> <br>
+//   <textarea name="message" placeholder="Enter Message Here" id="message" cols="30" rows="10"></textarea>
+//   <br>
+//   <submit class="submitButton">Submit</submit>
+// </form>
+
+
 
 }
 //this will generate a page dedicated to showing off a few projects that I have worked on
@@ -89,7 +140,6 @@ function generatePortfolioPage() {
 //run at start
 generateHomepage();
 generateAboutMe();
-generateContactPage();
 
 
 //event listeners
@@ -100,14 +150,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $(document).ready(function(){
     $('#aboutmebtn').on('click', function() {
-      var id = "#" + $(this).attr('goto');
-      var top = $(id).position().top;
-      $('html').scrollTop(top);
+      $("#currentpageHolder").empty(); //clean out the content that may have been generated before
+      generateAboutMe();
     })
     $('#portfoliobtn').on('click', function() {
-      
+      $("#currentpageHolder").empty(); //clean out the content that may have been generated before
+      generatePortfolioPage();
     })
     $('#contactbtn').on('click', function() {
-    
+      $("#currentpageHolder").empty(); //clean out the content that may have been generated before
+      generateContactPage();
   })
 });

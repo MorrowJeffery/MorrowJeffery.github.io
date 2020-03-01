@@ -3,44 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <link rel="stylereset" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <h1 class="clearfix" id="name">Jeffery Morrow</h1>
-            <section class="clearfix">
-                <a class="topBar" href="index.html">About</a><a class="topBar" href="portfolio.html">Portfolio</a><a class="topBar" href="./contact.html">Contact</a>
-            </section>
-        </header>
-        <hr id="tophr">
-
-        <div id="underTopBar">
-            <section id="aboutMeBlock">
-                <h1 >Portfolio</h1>
-                <hr>
-                <section class="portObjHolder">
-                    <a href=#><img class="portObj" src="https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?cs=srgb&dl=black-glass-surface-3137078.jpg&fm=jpg" alt="Pic of example project"></a><br>
-                    <h3 class="picText">Obj1</h3>
-                </section>
-                <section class="portObjHolder">
-                    <a href=#><img class="portObj" src="https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?cs=srgb&dl=black-glass-surface-3137078.jpg&fm=jpg" alt="Pic of example project"></a><br>
-                    <h3 class="picText">Obj2</h3>
-                </section>
-                <section class="portObjHolder">
-                    <a href=#><img class="portObj" src="https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?cs=srgb&dl=black-glass-surface-3137078.jpg&fm=jpg" alt="Pic of example project"></a>
-                    <h3 class="picText">Obj3</h3 class="picText">
-                </section>
-            </section>
-        </div>
-
-        <footer>
-            <p>Copyright &copy;</p>
-        </footer>
-    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue">
+          <i class="large fa fa-linkedin"></i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red"><i class="fa fa-linkedin spinny"aria-hidden="true"></i></a></li>
+          <!-- <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li> -->
+        </ul>
+      </div>
+      <div id="portfolioHolder"></div>
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="assets\js\script.js"></script>
 </body>
 </html>
