@@ -59,7 +59,7 @@ function generateAboutMe() {
   let HR2 = $("<hr>");
   let HR3 = $("<hr>");
   let name = $("<p>").text("Jeff Morrow");
-  let number = $("<p>").text("123-456-7890");
+  let number = $("<p>").text("916-718-7101");
   let email = $("<p>").text("morrowjefferya@gmail.com");
 
   contentHolder.append(contentHolder2);
@@ -114,26 +114,54 @@ function generateContactPage() {
   formdiv3.append(textlbl, textsec);
   formctr.append(formdiv1, formdiv2, formdiv3, formbtn);
 
-
-//   <form>
-//   <label for="name">Name:</label><br>
-//   <input type="text" name="name" placeholder="John Snow">
-//   <br>
-//   <label for="email">Email:</label><br>
-//   <input type="email" name="email" placeholder="email@provider.domain">
-//   <br>
-//   <label for="message">Message:</label> <br>
-//   <textarea name="message" placeholder="Enter Message Here" id="message" cols="30" rows="10"></textarea>
-//   <br>
-//   <submit class="submitButton">Submit</submit>
-// </form>
-
-
-
 }
+function addProjects() {
+  return (
+    [
+      {
+        projName: "Trivial Calendar",
+        projLink: "https://morrowjeffery.github.io/Trivial-Calendar/",
+        projPic: "assets/images/TrivialCalendarApp.PNG",
+        projDesc: "This is a calendar that will tell you the temperature for the day selected as well as a fun fact about that day"
+      },
+      {
+        projName: "On Ice",
+        projLink: "https://intense-falls-96725.herokuapp.com/",
+        projPic: "assets/images/onIceApp.PNG",
+        projDesc: "This is an app that facilitates lessons with users and their coaches/instructors by allowing users to reserve time slots"
+      },
+      {
+        projName: "Burger Solutions",
+        projLink: "https://aqueous-mountain-03618.herokuapp.com/",
+        projPic: "assets/images/burgerApp.PNG",
+        projDesc: 'This is a super simple app that allows users to "Create" burgers they can then eat. Just for fun.'
+      },
+    ]
+  )
+}
+
 //this will generate a page dedicated to showing off a few projects that I have worked on
 function generatePortfolioPage() {
+  let contentHolder = $("#currentpageHolder");
+  let jumboContainer = $("<div>").addClass("jumbotron container center").attr("id", "jumboContainer");
+  let projects = addProjects();
+  let jumboHeading = $("<h3>").addClass("jumboHeading").text("Portfolio:");
 
+
+  contentHolder.append(jumboContainer);
+  jumboContainer.append(jumboHeading);
+  projects.forEach(obj => {
+    let cardDiv = $("<div>").addClass("card projCard").attr("style", "width: 20rem;")
+    let cardImg = $("<img>").addClass("card-img-top projPic").attr("src", obj.projPic);
+    let cardBody = $("<div>").addClass("card-body");
+    let cardTitle = $("<h5>").addClass("card-title").text(obj.projName);
+    let cardText = $("<p>").addClass("card-text").text(obj.projDesc);
+    let projLink = $("<a>").addClass("btn btn-primary").attr("href", obj.projLink).text("Project Link");
+
+    jumboContainer.append(cardDiv);
+    cardDiv.append(cardImg, cardBody);
+    cardBody.append(cardTitle, cardText, projLink);
+  })
 }
 
 

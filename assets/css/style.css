@@ -73,7 +73,22 @@ body {
     color: white;
 }
 
+#jumboContainer {
+    background-color: #607d8b;
+}
+.jumboHeader {
+    color: white;
+}
 
+.projPic {
+    height: 100px;
+    width: 100px;
+}
+
+.projCard {
+    display:inline-block;
+    margin: 10px;
+}
 /* 
 header {
     background:#7293A0;
